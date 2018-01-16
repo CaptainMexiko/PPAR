@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int sumPara(){
+
+}
+
 
 int main(int argc, char const *argv[]) {
 
