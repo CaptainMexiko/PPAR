@@ -21,6 +21,7 @@ int crible(bool *e, int n){
 int main(int argc, char const *argv[]) {
   omp_set_num_threads(NUM_THREAD);
 
+  int somme;
   int n = atoi(argv[1]);
   bool tabBool[n];
 
@@ -30,11 +31,11 @@ int main(int argc, char const *argv[]) {
 
   crible(tabBool, n);
 
-  /*for (int i = 2; i < n; i++) {
-    if(tabBool[i] == true){
-      printf("%d ", i);
+  for (int j = 0; j < n; j++) {
+    if (tabBool[j] == true) {
+      somme = somme + tabBool[j];
     }
-  }*/
-
+  }
+  printf("%d\n", somme);
   return 0;
 }
